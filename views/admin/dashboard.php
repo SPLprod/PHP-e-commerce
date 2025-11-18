@@ -1,3 +1,4 @@
+<?php include '../inc/header.php'; ?>
 <?php
 
 ?>
@@ -13,11 +14,11 @@
 </div>
 
 <div class="products">
-        <div class="product">
-           
-        </div>
+    <div class="product">
+
+    </div>
 </div>
 
 <a href="/admin/logout">Se déconnecter</a>
 
-
+<?php include '../inc/footer.php'; ?>

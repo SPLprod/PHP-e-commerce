@@ -1,16 +1,17 @@
+<?php include '../inc/header.php'; ?>
 <?php
-    session_start();
-    include '../inc/header.php';
+session_start();
+include '../inc/header.php';
 
-    if (!isset($_SESSION['admin'])) {
-        header("Location: " . $baseUri . "/admin/login");
-        exit();
-    }
+if (!isset($_SESSION['admin'])) {
+    header("Location: " . $baseUri . "/admin/login");
+    exit();
+}
 
-    if (!isset($orders)) {
-        echo "<p>Erreur : aucune commande à afficher.</p>";
-        exit();
-    }
+if (!isset($orders)) {
+    echo "<p>Erreur : aucune commande à afficher.</p>";
+    exit();
+}
 ?>
 
 <h2 class="ordres-title">Liste des commandes</h2>
@@ -26,7 +27,7 @@
             <th>Total</th>
             <!-- <th>Date</th>
             <th>Status</th> -->
-            <th>Détails</th> 
+            <th>Détails</th>
         </tr>
     </thead>
     <tbody>

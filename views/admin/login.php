@@ -1,3 +1,5 @@
+<?php include '../inc/header.php'; ?>
+
 <?php
 
 ?>
@@ -13,4 +15,4 @@
     <input type="password" id="password" name="password" required>
     <input type="submit" name="login" value="Se connecter" />
 </form>
-
+<?php include '../inc/footer.php'; ?>
