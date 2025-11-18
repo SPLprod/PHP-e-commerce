@@ -4,7 +4,7 @@
 // PENSER À IMPORTER LES CONTROLLERS
 
 // Simplifier l'URI en supprimant le préfixe
-$baseUri = '/PHP_POLES/01-Cours/01-Cours/08_Site_boutique';
+$baseUri = '/PHP-e-commerce';
 
 // Extraction de l'URI demandée par l'utilisateur depuis la requête HTTP
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -34,10 +34,8 @@ if (array_key_exists($uri, $routes)) { // Vérifie si l'URI demandée existe dan
         // Si la fonction n'existe pas, affiche un message d'erreur
         echo 'Fonction non trouvée : ' . htmlspecialchars($functionName);
     }
-} 
-else {
+} else {
     // Si l'URI demandée n'existe pas dans les routes, affiche un message d'erreur
     echo 'Route inconnue : ' . htmlspecialchars($uri);
     include __DIR__ . '/../views/404.php'; // Page 404 pour les routes inexistantes
 }
-?>
