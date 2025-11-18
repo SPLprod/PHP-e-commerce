@@ -1,14 +1,10 @@
 <?php
 
-function showCart() {
-    
+function showCart()
+{
+    include __DIR__ . '/../views/cart.php';
 }
 
-function addToCart() {
-    
-}
+function addToCart() {}
 
-function checkout() {
-   
-}
-?>
+function checkout() {}

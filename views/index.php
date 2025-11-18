@@ -1,5 +1,5 @@
 <?php
-include '../inc/header.php';
+include __DIR__ . '/../inc/header.php';
 ?>
 <h1>Bienvenue dans notre boutique</h1>
 <div class="products">
@@ -15,4 +15,4 @@ include '../inc/header.php';
 
 </div>
 
-<?php include '../inc/footer.php'; ?>
+<?php include __DIR__ . '/../inc/footer.php'; ?>
