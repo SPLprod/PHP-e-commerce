@@ -13,6 +13,10 @@ function home()
 {
   // appel de la fonction getAllProducts
   // inclure le fichier index dans le dossier views
+  include __DIR__ . '/../views/index.php';
 }
 
-function viewProduct() {}
+function viewProduct()
+{
+  include __DIR__ . '/../views/product.php';
+}
