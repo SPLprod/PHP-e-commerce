@@ -6,7 +6,7 @@
 <h2>Tableau de bord admin</h2>
 
 <div>
-    <h3>Bonjour </h3>
+    <h3>Bonjour <?php echo $_SESSION["nom"] ?></h3>
 </div>
 
 <div>
