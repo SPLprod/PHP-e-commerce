@@ -1,7 +1,7 @@
 <?php
 try {
     $pdo = new PDO(
-        'mysql:host=localhost;dbname=site_e-commerce',
+        'mysql:host=localhost;port=3308,dbname=site_e-commerce',
         // driver mysql + nom du serveur de la BDD + nom de la BDD 
         'root',   // pseudo de la BDD
         '',   // mdp de la BDD 'root' pour MAC et '' pour Windows
