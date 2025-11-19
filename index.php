@@ -4,5 +4,5 @@
     error_reporting(E_ALL);
     // $baseUri = '/PHP_POLES/01-Cours/01-Cours/08_Site_boutique';
     echo 'Test d\'inclusion';
-    include './controllers/router.php';
+    include 'controllers/router.php';
 ?>
