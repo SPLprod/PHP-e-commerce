@@ -2,6 +2,9 @@
 // Gestion des routes du projet
 
 // PENSER À IMPORTER LES CONTROLLERS
+require_once __DIR__ . '/productController.php';
+require_once __DIR__ . '/cartController.php';
+require_once __DIR__ . '/adminController.php';
 
 // Simplifier l'URI en supprimant le préfixe
 $baseUri = '/PHP-e-commerce';
@@ -20,10 +23,17 @@ echo 'URI : ' . $uri . '<br>'; // Affiche l'URI pour vérification
 
 
 // Définition des routes disponibles et des fonctions correspondantes
+
 $routes = [
-    '/' => 'home',
-    // A gérer !
+    '/'         => 'home',
+    '/product'  => 'viewProduct',
+    '/cart'     => 'showCart',
+    '/login'    => 'handleLogin',
+    '/register' => 'handleRegister',
+    '/dashboard'    => 'dashboard',
 ];
+
+
 
 // Gestion des routes
 if (array_key_exists($uri, $routes)) { // Vérifie si l'URI demandée existe dans les routes définies
