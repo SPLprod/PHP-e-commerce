@@ -30,9 +30,9 @@ $routes = [
     '/cart'     => 'showCart',
     '/login'    => 'handleLogin',
     '/register' => 'handleRegister',
-    '/dashboard'    => 'dashboard',
-];
+    '/dashboard'    => 'dashboard'
 
+];
 
 
 // Gestion des routes

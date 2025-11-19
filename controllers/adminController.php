@@ -1,6 +1,6 @@
 <?php
 
-$baseUri = '/PHP_POLES/01-Cours/01-Cours/08_Site_boutique';
+$baseUri = '/PHP-e-commerce';
 
 // Fonction pour gérer l'inscription
 function handleRegister()
