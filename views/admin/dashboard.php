@@ -1,6 +1,6 @@
 <?php include '../inc/header.php'; ?>
 <?php
-
+var_dump($_POST)
 ?>
 
 <h2>Tableau de bord admin</h2>
