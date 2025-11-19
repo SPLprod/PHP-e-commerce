@@ -33,6 +33,7 @@ if (isset($_POST["password"]) && !empty($_POST["password"])) {
         echo 'Password is valid!';
         $_SESSION["nom"] = $result["nom_utilisateur"];
         $_SESSION["email"] = $result["email"];
+        $_SESSION["isconnect"] = true;
         header("location:dashboard");
     } else {
         echo 'Invalid password.';
