@@ -1,5 +1,9 @@
 <?php include '../inc/header.php'; ?>
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> b36eb68d36940b90b92d56a4b49882ed79520ada
 session_start();
 ?>
 
