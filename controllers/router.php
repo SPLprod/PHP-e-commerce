@@ -1,6 +1,6 @@
 <?php
 // Gestion des routes du projet
-
+require_once __DIR__ . '/../database/db.php';
 // PENSER À IMPORTER LES CONTROLLERS
 require_once __DIR__ . '/../database/db.php';
 require_once __DIR__ . '/productController.php';
@@ -32,8 +32,10 @@ $routes = [
     '/login'    => 'handleLogin',
     '/register' => 'handleRegister',
     '/dashboard'    => 'dashboard',
-];
+    '/orders' => 'viewOrders',
 
+
+];
 
 
 // Gestion des routes

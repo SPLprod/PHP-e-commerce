@@ -1,8 +1,9 @@
 <?php include '../inc/header.php'; ?>
 
 <?php
-include_once"../database/db.php";
-include_once"adminController.php"
+include_once "../database/db.php";
+include_once "adminController.php";
+session_start();
 ?>
 
 
@@ -18,30 +19,29 @@ include_once"adminController.php"
     <input type="submit" name="login" value="Se connecter" />
 </form>
 
-<?php 
-    if (isset($_POST["email"]) && !empty($_POST["email"])) {
-        $result = $pdo->prepare("SELECT * FROM admins WHERE email = ?");
-        $result->execute([$_POST["email"]]);
-        $result = $result->fetch(PDO::FETCH_ASSOC);
-        var_dump($result);
+<?php
+if (isset($_POST["email"]) && !empty($_POST["email"])) {
+    $result = $pdo->prepare("SELECT * FROM admins WHERE email = ?");
+    $result->execute([$_POST["email"]]);
+    $result = $result->fetch(PDO::FETCH_ASSOC);
+    var_dump($result);
+} else {
+    echo 'Invalid email.';
+    die();
+}
 
+if (isset($_POST["password"]) && !empty($_POST["password"])) {
+    if ($result && password_verify($_POST["password"], $result["mot_de_passe"])) {
+        echo 'Password is valid!';
+        $_SESSION["nom"] = $result["nom_utilisateur"];
+        $_SESSION["email"] = $result["email"];
+        $_SESSION["isconnect"] = true;
+        header("location:dashboard");
     } else {
-        echo 'Invalid email.';
+        echo 'Invalid password.';
+        $redirect = "";
         die();
     }
-    
-    if (isset($_POST["password"]) && !empty($_POST["password"])) {
-        if ($result && password_verify($_POST["password"], $result["mot_de_passe"])) {
-            echo 'Password is valid!';
-            $_SESSION["nom"] = $result["nom_utilisateur"];
-            $_SESSION["email"] = $result["email"];
-            $_SESSION["isconnect"] = true;
-            header("location:dashboard");
-            } else {
-                echo 'Invalid password.';
-                $redirect = "";
-                die();
-            }
-    }    
+}
 ?>
 <?php include '../inc/footer.php'; ?>
