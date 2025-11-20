@@ -2,6 +2,7 @@
 // Gestion des routes du projet
 
 // PENSER À IMPORTER LES CONTROLLERS
+require_once __DIR__ . '/../database/db.php';
 require_once __DIR__ . '/productController.php';
 require_once __DIR__ . '/cartController.php';
 require_once __DIR__ . '/adminController.php';

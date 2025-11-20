@@ -1,8 +1,10 @@
-<?php
+<?php include '../inc/header.php'; ?>
 
+<?php
+include_once"../database/db.php";
+include_once"adminController.php"
 ?>
 
-<p>modif</p>
 
 <h2>Se connecter</h2>
 
