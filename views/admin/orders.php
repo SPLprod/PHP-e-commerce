@@ -1,12 +1,14 @@
-<?php include '../inc/header.php'; ?>
+<?php include __DIR__ . '/../../inc/header.php';
+var_dump(__DIR__);
+?>
 <?php
 session_start();
-include '../inc/header.php';
 
-if (!isset($_SESSION['admin'])) {
-    header("Location: " . $baseUri . "/admin/login");
-    exit();
-}
+
+// if (!isset($_SESSION['admin'])) {
+//     // header("Location: " . $baseUri . "/admin/login");
+//     exit();
+// }
 
 if (!isset($orders)) {
     echo "<p>Erreur : aucune commande à afficher.</p>";
