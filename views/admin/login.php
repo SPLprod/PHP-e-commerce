@@ -6,11 +6,12 @@ include_once "adminController.php";
 session_start();
 ?>
 
+
 <h2>Se connecter</h2>
 
 
 
-<form method="POST" action="">
+<form method="POST" action="/admin/login">
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" required>
     <label for="password">Mot de passe:</label>
