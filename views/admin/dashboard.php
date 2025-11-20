@@ -1,6 +1,7 @@
 <?php include '../inc/header.php'; ?>
 <?php
-var_dump($_POST)
+
+session_start();
 ?>
 
 <h2>Tableau de bord admin</h2>

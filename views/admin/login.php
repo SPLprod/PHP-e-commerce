@@ -2,7 +2,8 @@
 
 <?php
 include_once "../database/db.php";
-include_once "adminController.php"
+include_once "adminController.php";
+session_start();
 ?>
 
 <h2>Se connecter</h2>
