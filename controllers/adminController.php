@@ -1,6 +1,6 @@
 <?php
 
-$baseUri = '/PHP_POLES/01-Cours/01-Cours/08_Site_boutique';
+$baseUri = '/PHP-e-commerce';
 
 // Fonction pour gérer l'inscription
 function handleRegister()
@@ -23,10 +23,20 @@ function dashboard()
 }
 
 // Fonction pour récupérer les commandes
-function getOrders() {}
+function getOrders()
+{
+    // select produits dans le bdd
+    global $pdo;
+    $resultat = $pdo->query("SELECT * FROM products");
+    $result = $resultat->fetch(PDO::FETCH_ASSOC);
+}
+function viewOrders()
+{
+    // $orders = getOrders()
+    global $pdo;
 
-// Fonction pour afficher les commandes
-function viewOrders() {}
+    include __DIR__ . '/../views/admin/orders.php';
+}
 
 // Gestion de la déconnexion
 function logout() {}

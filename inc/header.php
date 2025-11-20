@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +18,15 @@ session_start();
         <nav>
             <a href="/PHP-e-commerce/">Accueil</a>
 
-            <?php 
-                if (isset($_SESSION["isconnect"]) && $_SESSION["isconnect"] == true) {
-                    echo "<a href='/PHP-e-commerce/dashboard'>Admin</a>" . "<a href='/PHP-e-commerce/cart'>Panier</a>";
-                } else {
-                    echo "<a href='/PHP-e-commerce/register'>S'inscrire</a>" . "<a href='/PHP-e-commerce/login'>Se connecter</a>";
-                }
+            <?php
+            if (isset($_SESSION["isconnect"]) && $_SESSION["isconnect"] == true) {
+                echo "<a href='/PHP-e-commerce/dashboard'>Admin</a>" . "<a href='/PHP-e-commerce/cart'>Panier</a>";
+            } else {
+                echo "<a href='/PHP-e-commerce/register'>S'inscrire</a>" . "<a href='/PHP-e-commerce/login'>Se connecter</a>";
+            }
             ?>
-            
-            
+
+
         </nav>
     </header>
     <main>

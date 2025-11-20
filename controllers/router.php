@@ -31,8 +31,10 @@ $routes = [
     '/login'    => 'handleLogin',
     '/register' => 'handleRegister',
     '/dashboard'    => 'dashboard',
-];
+    '/orders' => 'viewOrders',
 
+
+];
 
 
 // Gestion des routes

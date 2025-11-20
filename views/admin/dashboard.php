@@ -1,6 +1,7 @@
 <?php include '../inc/header.php'; ?>
 <?php
 
+session_start();
 ?>
 
 <h2>Tableau de bord admin</h2>
