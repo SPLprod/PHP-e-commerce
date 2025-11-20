@@ -11,7 +11,9 @@ function handleRegister()
 // Fonction pour gérer la connexion
 function handleLogin()
 {
+    global $pdo;
     include __DIR__ . '/../views/admin/login.php';
+
 }
 
 // Fonction pour afficher le tableau de bord
