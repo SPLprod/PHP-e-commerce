@@ -4,7 +4,7 @@ try {
         'mysql:host=localhost;dbname=site_e-commerce',
         // driver mysql + nom du serveur de la BDD + nom de la BDD 
         'root',   // pseudo de la BDD
-        '',   // mdp de la BDD 'root' pour MAC et '' pour Windows
+        'root',   // mdp de la BDD 'root' pour MAC et '' pour Windows
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,  // pour afficher les messages d'erreur SQL
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'  // définition du jeu de caractères des échanges avec la BDD

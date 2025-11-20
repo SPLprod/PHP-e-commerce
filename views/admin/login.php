@@ -8,10 +8,19 @@ include_once "adminController.php";
 session_start();
 ?>
 
+<<<<<<< HEAD
 >>>>>>> b36eb68d36940b90b92d56a4b49882ed79520ada
 <h2>Se connecter</h2>
 
 <form method="POST" action="">
+=======
+
+<h2>Se connecter</h2>
+
+
+
+<form method="POST" action="/admin/login">
+>>>>>>> 81586c0b795200dea3305601fa8897539bbd16ae
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" required>
     <label for="password">Mot de passe:</label>
